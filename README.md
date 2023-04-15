@@ -1,5 +1,5 @@
 # wireguard-port-test
-**Util for testing forwarded ports through wireguard vpn**
+**util for testing forwarded ports through wireguard vpn**
 
 this script creates a temporary `lscr.io/linuxserver/wireguard:latest` container, installs socat, and then listens on a specified port. you can then connect remotely to test if your vpn is actually forwarding the port.
 
