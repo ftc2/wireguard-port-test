@@ -1,7 +1,7 @@
 # wireguard-port-test
 **util for testing forwarded ports through wireguard vpn**
 
-this script creates a temporary `linuxserver/wireguard` container, installs socat, and then listens on a specified port. you can then connect remotely to test if your vpn is actually forwarding the port.
+this script creates a temporary `linuxserver/wireguard` container, installs `socat`, and then listens on a specified port. you can then connect remotely to test if your vpn is actually forwarding the port.
 
 i use this to test bittorrent connectability – you get way more peers if your bt client can listen. note that your vpn provider needs to actually support port forwarding, and you have to set that up first for your specific port. i suggest choosing a random port between 10000 and 65353. you want this port to be unique to you for your vpn endpoint.
 
