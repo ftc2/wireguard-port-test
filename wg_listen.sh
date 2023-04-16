@@ -19,11 +19,13 @@ function print_help {
 "
 }
 
-if [ -z "$CONF" ]; then
+[[ "$CONF" =~ -h|--help ]] && print_help && exit
+
+if [[ -z "$CONF" ]]; then
   echo "error: wireguard config file not specified" >&2
   print_help
   exit 1
-elif [ -z "$PORT" ]; then
+elif [[ -z "$PORT" ]]; then
   echo "error: port not specified" >&2
   print_help
   exit 1
