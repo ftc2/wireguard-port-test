@@ -23,6 +23,8 @@ wg_listen.sh CONF PORT [FILTER]
 ```
 
 ## example
+**i've seen problems with using the same wireguard conf multiple times simultaneously, so i suggest shutting down wireguard elsewhere during testing**
+
 pretend your real ip is `142.250.190.110`
 
 ```
