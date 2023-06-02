@@ -50,7 +50,7 @@ docker run \
   --cap-add=SYS_MODULE \
   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
   -v "${CONF}:/config/wg0.conf:ro" \
-  lscr.io/linuxserver/wireguard:latest \
+  lscr.io/linuxserver/wireguard:legacy \
   bash -c "\
     sleep 3; \
     eval $IP_CMD; \
@@ -58,7 +58,7 @@ docker run \
     echo '**************************************************'; \
     echo 'INSTALLING socat (and testing VPN WAN connection)'; \
     echo '**************************************************'; \
-    apt-get update && apt-get -y install socat; \
+    apt update && apt -y install socat; \
     echo '**************************************************'; \
     eval $LISTEN_INFO_CMD; \
     echo '**************************************************'; \
