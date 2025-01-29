@@ -49,8 +49,9 @@ docker run \
   --cap-add=NET_ADMIN \
   --cap-add=SYS_MODULE \
   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
-  -v "${CONF}:/config/wg0.conf:ro" \
-  lscr.io/linuxserver/wireguard:legacy \
+  -v /lib/modules:/lib/modules \
+  -v "${CONF}:/config/wg_confs/myConf.conf" \
+  lscr.io/linuxserver/wireguard \
   bash -c "\
     sleep 3; \
     eval $IP_CMD; \

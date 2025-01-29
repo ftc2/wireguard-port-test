@@ -56,7 +56,5 @@ hows it going
 ```
 
 ## tips
-kill the container if it hangs:
-```
-docker kill wireguard-port-test
-```
+- if you see an error like `iptables-restore: unable to initialize table 'raw'`, try manually loading the module with `sudo modprobe ip_tables`
+- if the container hangs, try killing it with `docker kill wireguard-port-test`
