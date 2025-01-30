@@ -59,7 +59,7 @@ docker run \
     echo '**************************************************'; \
     echo 'INSTALLING socat (and testing VPN WAN connection)'; \
     echo '**************************************************'; \
-    apt update && apt -y install socat; \
+    apk update && apk add socat; \
     echo '**************************************************'; \
     eval $LISTEN_INFO_CMD; \
     echo '**************************************************'; \
